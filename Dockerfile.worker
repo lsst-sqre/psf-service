@@ -16,7 +16,7 @@ COPY scripts/install-worker.sh .
 RUN ./install-worker.sh && rm ./install-worker.sh
 
 # Install the worker code.
-COPY src/vocutouts/workers.py /
+COPY src/psfservice/workers.py /
 COPY scripts/start-worker.sh /
 
 # Create a non-root user

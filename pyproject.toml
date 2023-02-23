@@ -1,7 +1,7 @@
 [project]
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
-name = "vo-cutouts"
-description = "Image cutout service for the Rubin Science Platform."
+name = "psf-service"
+description = "PSF-recreation service for the Rubin Science Platform."
 license = { file = "LICENSE" }
 readme = "README.md"
 keywords = ["rubin", "lsst"]
@@ -22,11 +22,11 @@ dependencies = []
 dynamic = ["version"]
 
 [project.scripts]
-vo-cutouts = "vocutouts.cli:main"
+psf-service = "psfservice.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/lsst-sqre/vo-cutouts"
-Source = "https://github.com/lsst-sqre/vo-cutouts"
+Homepage = "https://github.com/lsst-sqre/psf-service"
+Source = "https://github.com/lsst-sqre/psf-service"
 
 [build-system]
 requires = [
@@ -41,7 +41,7 @@ build-backend = "setuptools.build_meta"
 [tool.coverage.run]
 parallel = true
 branch = true
-source = ["vocutouts"]
+source = ["psfservice"]
 
 [tool.coverage.paths]
 source = ["src", ".tox/*/site-packages"]
@@ -81,7 +81,7 @@ exclude = '''
 [tool.isort]
 profile = "black"
 line_length = 79
-known_first_party = ["vocutouts", "tests"]
+known_first_party = ["psfservice", "tests"]
 skip = ["docs/conf.py"]
 
 [tool.pytest.ini_options]
